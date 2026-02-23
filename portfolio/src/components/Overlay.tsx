@@ -25,6 +25,28 @@ export default function Overlay() {
                     Akshat Shah<span className="text-purple-500">.</span><br />
                     <span className="text-gray-400 text-4xl md:text-6xl">Software Engineer.</span>
                 </h1>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.5, duration: 0.8 }}
+                    className="mt-8 pointer-events-auto"
+                >
+                    <a
+                        href="/Akshat%20Shah%20Resume%20(USA).pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-lg shadow-purple-500/20"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        View Resume
+                    </a>
+                </motion.div>
             </Section>
 
             {/* Section 2: 30% */}

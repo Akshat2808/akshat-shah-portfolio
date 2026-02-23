@@ -15,14 +15,24 @@ export default function Contact() {
                         +1 314-537-7263
                     </a>
                     <p className="text-gray-500">Saint Louis, MO</p>
-                    <a
-                        href="https://www.linkedin.com/in/akshat-shah-433632214/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block mt-2 text-purple-400 hover:text-purple-300 underline underline-offset-4"
-                    >
-                        Connect on LinkedIn
-                    </a>
+                    <div className="flex flex-col gap-2 mt-2">
+                        <a
+                            href="https://www.linkedin.com/in/akshat-shah-433632214/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-purple-400 hover:text-purple-300 underline underline-offset-4"
+                        >
+                            Connect on LinkedIn
+                        </a>
+                        <a
+                            href="/Akshat%20Shah%20Resume%20(USA).pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-gray-400 hover:text-white transition-colors"
+                        >
+                            Download Resume (PDF)
+                        </a>
+                    </div>
                 </div>
             </div>
 
