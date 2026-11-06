@@ -1,20 +1,66 @@
 export default function Skills() {
     const skillCategories = [
         {
-            title: "Languages",
-            skills: ["C", "C++", "Java", "Python"]
+            title: "Programming Languages",
+            skills: ["Java", "Python", "C", "C++", "SQL", "JavaScript", "TypeScript"]
         },
         {
-            title: "Cloud Computing",
-            skills: ["AWS", "Azure"]
+            title: "Software Engineering & Backend",
+            skills: [
+                "Data Structures", "Algorithms", "Object-Oriented Programming", "Spring Boot",
+                "Spring Security", "FastAPI", "REST APIs", "Microservices", "Distributed Systems",
+                "System Design", "Authentication & Authorization", "API Integration",
+                "WebSockets", "Asynchronous Programming", "Database Optimization", "Error Handling"
+            ]
         },
         {
-            title: "Tools",
-            skills: ["Git", "GitHub", "GitLab", "Qt", "SpringBoot", "Eclipse IDE", "Android Studio", "Docker", "CI/CD"]
+            title: "Generative AI, LLMs & Agentic AI",
+            skills: [
+                "GPT-OSS", "Llama", "RAG", "Embeddings", "Semantic Retrieval",
+                "Prompt Engineering", "Context Engineering", "Grounded Generation",
+                "SFT", "Instruction Tuning", "DPO", "RLHF", "LoRA", "QLoRA", "PEFT",
+                "Multi-Agent Systems", "AI Agents", "MCP", "LangGraph", "Tool Calling",
+                "Agent Routing", "Planning & Reasoning", "Agent State Management",
+                "Retrieval Evaluation", "Grounding Evaluation"
+            ]
         },
         {
-            title: "Operating Systems",
-            skills: ["Windows", "Linux"]
+            title: "Machine Learning & Deep Learning",
+            skills: [
+                "PyTorch", "TensorFlow", "Scikit-Learn", "Hugging Face", "Transformers",
+                "NLP", "Sentence Transformers", "OpenCV", "Computer Vision",
+                "Machine Learning", "Deep Learning", "Feature Engineering",
+                "Image Preprocessing", "Object Localization", "Bounding-Box Prediction",
+                "Model Training & Evaluation", "Hyperparameter Tuning", "Benchmarking"
+            ]
+        },
+        {
+            title: "Cloud, Databases & DevOps",
+            skills: [
+                "AWS (EC2, S3, IAM, RDS, Lambda, EKS, ECR, CloudWatch)", "Azure",
+                "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "MLflow",
+                "OpenTelemetry", "Apache Spark", "Delta Lake", "MySQL", "PostgreSQL",
+                "MS SQL Server", "Git", "GitHub", "GitLab", "Linux", "Postman"
+            ]
+        },
+        {
+            title: "MLOps, Inference & Optimization",
+            skills: [
+                "Model Deployment", "Model Serving", "Experiment Tracking", "Model Registry",
+                "Drift Monitoring", "vLLM", "TensorRT-LLM", "NVIDIA Triton", "Quantization",
+                "Batching", "Caching", "GPU Optimization", "Latency Optimization",
+                "Throughput Optimization", "Model Evaluation"
+            ]
+        },
+        {
+            title: "Security, Robotics & Automation",
+            skills: [
+                "AI Security", "Cybersecurity", "Adversarial Machine Learning",
+                "Backdoor Attack Detection", "Prompt Injection Detection", "Industrial IoT",
+                "Robotic Parameter Optimization", "Deepstream", "Qt Framework",
+                "Real-Time Dashboards", "IoT Communication Interfaces", "Playwright",
+                "W3C WebDriver", "Browser Automation", "Parallel Execution"
+            ]
         }
     ];
 
@@ -33,9 +79,9 @@ export default function Skills() {
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold mb-12">Technical Skills & Certifications</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {skillCategories.map((category, index) => (
-                        <div key={index} className="space-y-4">
+                        <div key={index} className="space-y-4 bg-white/[0.03] p-6 rounded-2xl border border-white/5 hover:border-purple-500/20 transition-all">
                             <h3 className="text-xl font-bold text-purple-400 border-b border-purple-500/30 pb-2">{category.title}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {category.skills.map((skill, idx) => (

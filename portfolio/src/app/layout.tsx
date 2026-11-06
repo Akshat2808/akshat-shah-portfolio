@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Akshat Shah Portfolio",
-  description: "AI Engineer & Software Developer Portfolio",
+  title: "Akshat Shah | Software Engineer & AI/ML Engineer",
+  description: "Portfolio of Akshat Shah - Software Engineer & AI/ML Engineer specializing in Scalable Backend, Generative AI, Cloud & MLOps.",
 };
 
 export default function RootLayout({

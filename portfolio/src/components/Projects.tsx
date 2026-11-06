@@ -1,65 +1,103 @@
 export default function Projects() {
     const projects = [
         {
-            title: "Hosting Application on AWS",
-            category: "Cloud / DevOps",
-            description: "Hosted API, uploaded JSON files and whole application on AWS by using different services of AWS. Built with AWS and Spring Boot.",
+            title: "Backdoor Attack Detection in Large Language Models",
+            category: "AI Security & LLMs",
+            techStack: ["Python", "PyTorch", "NLP", "Sentence Transformers", "GMM"],
+            highlights: [
+                "Designed and implemented an AI security framework to identify hidden triggers, semantic anomalies, and backdoor attack patterns in large language model prompts.",
+                "Developed sentence embedding and semantic similarity pipelines using transformer-based language models and Gaussian Mixture Models for unsupervised anomaly detection.",
+                "Processed and evaluated thousands of prompt samples against backdoor attacks, prompt injection, jailbreak attempts, and adversarial scenarios.",
+                "Automated preprocessing, feature extraction, anomaly detection, and evaluation workflows, reducing manual security analysis effort by over 80%."
+            ]
         },
         {
-            title: "Ticket Booking Desktop App",
-            category: "Desktop Application",
-            description: "A desktop application that provides cinema hall owners a digital system for managing movie shows and ticket bookings. Built with vb.net and MS-SQL.",
+            title: "MCP Server Evaluation & CAPTCHA Automation Framework",
+            category: "Agentic AI & Distributed Automation",
+            techStack: ["Python", "Playwright", "MCP", "LangGraph", "Multi-Agent"],
+            highlights: [
+                "Developed a scalable benchmarking framework capable of evaluating 7,000+ MCP servers through automated health checks, capability validation, tool testing, ranking, and standardized performance assessment.",
+                "Implemented asynchronous MCP client-server communication, tool discovery, execution workflows, and server capability analysis to support distributed automation.",
+                "Built LangGraph-based multi-agent orchestration and Playwright browser automation for parallel server execution and CAPTCHA interaction workflows.",
+                "Automated server evaluation and reporting, reducing manual validation effort by approximately 90% while generating detailed capability and benchmarking reports."
+            ]
         },
         {
-            title: "Indian Sign Recognition",
-            category: "Machine Learning",
-            description: "Created a project for Indian Sign Recognition of hands using Machine Learning based on CNN.",
+            title: "End-to-End Object Localization ML Pipeline",
+            category: "Computer Vision & Deep Learning",
+            techStack: ["Python", "TensorFlow", "OpenCV", "Object Localization"],
+            highlights: [
+                "Developed an end-to-end computer vision pipeline for image preprocessing, bounding-box prediction, model training, evaluation, and inference using Python, TensorFlow, and OpenCV.",
+                "Trained and evaluated machine learning models on image datasets, applying feature engineering and hyperparameter optimization to improve generalization and prediction performance.",
+                "Developed visualization and evaluation workflows to analyze localization accuracy, bounding-box predictions, and model performance."
+            ]
         },
         {
-            title: "Voice Assistant Companion",
-            category: "AI / Python",
-            description: "An application that works on voice input, gives voice output, and displays text. Provides instant computed results to the user.",
-        },
-        {
-            title: "Donation Application",
-            category: "Full Stack",
-            description: "A fully working application used to donate funds easily to collaborated charities. built with XML and Java.",
-        },
-        {
-            title: "Car Rental Application",
-            category: "Full Stack",
-            description: "Application used to rent several types of cars from a single platform with a user-friendly interface. Built with XML and Java.",
+            title: "Breaking the Loop: Security in ML-Driven Robotic Systems",
+            subtitle: "Proposed in IEEE Transactions on Systems, Man and Cybernetics: Systems",
+            category: "Robotics Security Research",
+            badge: "Research Publication",
+            techStack: ["Adversarial ML", "Cyber-Physical Security", "Threat Modeling", "AI Safety"],
+            highlights: [
+                "Conducted a systematic review of adversarial attacks, backdoor attacks, prompt injection, data poisoning, and jailbreak vulnerabilities in machine learning-driven robotic systems.",
+                "Proposed a security taxonomy spanning perception, planning, decision-making, and execution layers, evaluating defense strategies and research directions for trustworthy AI and cyber-physical systems."
+            ]
         }
     ];
 
     return (
         <section className="relative w-full py-20 px-4 md:px-10 z-20 bg-[#121212]">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Selected Works</h2>
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">Selected Works & Research</h2>
+                        <p className="text-gray-400">Featured projects in AI security, multi-agent frameworks, computer vision, and systems research.</p>
+                    </div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="group relative p-8 rounded-2xl overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10"
+                            className="group relative p-8 rounded-2xl flex flex-col justify-between overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                             <div className="relative z-10">
-                                <span className="text-sm font-medium text-purple-400 uppercase tracking-widest mb-2 block">
-                                    {project.category}
-                                </span>
-                                <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                                <div className="flex items-center justify-between gap-2 mb-3">
+                                    <span className="text-xs font-semibold text-purple-400 uppercase tracking-widest px-2.5 py-1 rounded bg-purple-500/10 border border-purple-500/20">
+                                        {project.category}
+                                    </span>
+                                    {project.badge && (
+                                        <span className="text-xs font-medium text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded">
+                                            {project.badge}
+                                        </span>
+                                    )}
+                                </div>
+
+                                <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                                    {project.description}
-                                </p>
 
-                                <div className="mt-8 flex items-center gap-2 text-white font-medium opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                    View Case Study
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                {project.subtitle && (
+                                    <p className="text-sm text-gray-400 italic mb-4">
+                                        {project.subtitle}
+                                    </p>
+                                )}
+
+                                <div className="flex flex-wrap gap-1.5 my-4">
+                                    {project.techStack.map((tech, tIdx) => (
+                                        <span key={tIdx} className="text-xs bg-white/10 text-gray-300 px-2.5 py-1 rounded-md">
+                                            {tech}
+                                        </span>
+                                    ))}
                                 </div>
+
+                                <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-gray-300 leading-relaxed mb-6">
+                                    {project.highlights.map((bullet, bIdx) => (
+                                        <li key={bIdx}>{bullet}</li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     ))}

@@ -6,25 +6,26 @@ import { useRef } from 'react';
 
 export default function Overlay() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        // We want the scroll progress of the entire page or the parent container?
-        // Since this component is inside the 500vh container (placed absolutely), 
-        // we can use global scroll or leverage the fact that it's in the flow.
-        // But wait, it's sticky or fixed? 
-        // The requirement: "text sections that sit on top of the canvas".
-        // If the parent is 500vh, we can position these sections absolutely within it.
-    });
+    const { scrollYProgress } = useScroll();
 
     return (
         <div ref={containerRef} className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 flex flex-col justify-between pb-[50vh]">
-            {/* We can use specific top positions to space them out over the 500vh */}
-
             {/* Section 1: 0% - Start */}
             <Section start={0} end={0.2} align="center">
-                <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white">
-                    Akshat Shah<span className="text-purple-500">.</span><br />
-                    <span className="text-gray-400 text-4xl md:text-6xl">Software Engineer.</span>
-                </h1>
+                <div className="text-center max-w-4xl mx-auto">
+                    <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight text-white mb-4">
+                        Akshat Shah<span className="text-purple-500">.</span>
+                    </h1>
+                    <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-purple-200">
+                            Software Engineer
+                        </span>
+                        <span className="text-purple-400 font-bold mx-1">&</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-purple-200">
+                            AI/ML Engineer
+                        </span>
+                    </div>
+                </div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -52,14 +53,14 @@ export default function Overlay() {
             {/* Section 2: 30% */}
             <Section start={0.25} end={0.5} align="left">
                 <h2 className="text-4xl md:text-6xl font-semibold text-white ml-10 max-w-[60vw]">
-                    Specializing in <span className="text-purple-400">Cybersecurity</span>, <span className="text-blue-400">IoT Solutions</span>, <span className="text-purple-400">Cloud</span> & <span className="text-blue-400">Machine Learning</span>.
+                    Specializing in <span className="text-purple-400">Backend Systems</span>, <span className="text-blue-400">Generative AI</span>, <span className="text-purple-400">Cloud & MLOps</span>, and <span className="text-blue-400">AI Security</span>.
                 </h2>
             </Section>
 
             {/* Section 3: 60% */}
             <Section start={0.55} end={0.8} align="right">
                 <h2 className="text-4xl md:text-6xl font-semibold text-white mr-10 text-right max-w-[60vw] ml-auto">
-                    Building scalable, secure, and data-driven systems.
+                    Building scalable, cloud-native services, multi-agent systems, and production AI/ML solutions.
                 </h2>
             </Section>
 

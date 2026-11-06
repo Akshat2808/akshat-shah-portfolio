@@ -3,49 +3,52 @@ export default function Experience() {
         {
             role: "Software Engineer",
             company: "Dynamic Active Inc.",
-            period: "Jan 2026 – Present",
+            period: "Nov 2025 – Jul 2026",
             location: "California, USA",
             description: [
-                "Will develop and integrate scalable backend systems with secure database connectivity, implementing authentication, role-based access, and robust API workflows.",
-                "Will design and optimize data-driven features with a focus on performance, security, and real-world usability, following industry best practices and clean code standards."
+                "Developed and maintained 20+ scalable REST APIs using Java, Spring Boot, and microservices architecture, supporting 10,000+ daily transactions across business-critical applications.",
+                "Designed reusable backend modules and secure authentication/authorization mechanisms using Spring Security, role-based access controls, and API integrations to improve application security and maintainability.",
+                "Optimized SQL queries, database interactions, and backend processing, reducing API response latency by 30% and improving overall application performance.",
+                "Enhanced software reliability through debugging, automated testing, code reviews, performance tuning, and CI/CD deployments using GitHub Actions, Docker, and AWS."
             ]
         },
         {
             role: "Research Assistant",
             company: "Saint Louis University",
-            period: "Mar 2025 – Present",
+            period: "Mar 2025 – May 2026",
             location: "Saint Louis, USA",
             description: [
-                "Working on a research project to detect Backdoor attacks and whether the user prompt contains the trigger or not.",
-                "And providing solutions to prevent the user from Backdoor attacks."
+                "Conducted research on adversarial vulnerabilities, backdoor attacks, prompt injection, and jailbreak techniques in large language models using Python, PyTorch, and transformer-based architectures.",
+                "Developed semantic analysis and anomaly detection pipelines using Sentence Transformers, sentence embeddings, supervised learning, and unsupervised learning to identify hidden triggers and adversarial patterns.",
+                "Built automated data preprocessing, feature extraction, model training, validation, and evaluation workflows to support repeatable machine learning experiments.",
+                "Collaborated on AI security research, experimental evaluation, technical documentation, and presentations of research findings."
             ]
         },
         {
-            role: "Software Intern",
+            role: "AI/ML Engineer",
+            company: "Technoride Solutions Pvt. Ltd.",
+            period: "Aug 2022 – Aug 2024",
+            location: "Vadodara, India",
+            description: [
+                "Engineered scalable AI/ML and Generative AI pipelines using Python, SQL, Apache Spark, Delta Lake, embeddings, and RAG to transform enterprise data into production-ready context for retrieval and multi-agent applications.",
+                "Developed and optimized PyTorch/Transformer models using Hugging Face, hyperparameter tuning, validation, and evaluation, improving F1 score by 12% and recall by 15%.",
+                "Fine-tuned pretrained LLMs using SFT, instruction tuning, LoRA/QLoRA, PEFT, and DPO/RLHF for domain-specific applications, improving groundedness by 18%, task accuracy by 14%, and agent-routing accuracy by 16%.",
+                "Established reproducible MLOps workflows using MLflow experiment tracking, model registry, version control, Git, CI/CD, and AWS S3/ECR to support model evaluation and production deployment.",
+                "Optimized LLM inference using quantization, batching, caching, vLLM, TensorRT-LLM, NVIDIA Triton, and GPU optimization, reducing p95 latency by 35%, inference costs by 28%, and increasing throughput by 40%.",
+                "Deployed and maintained scalable AI/ML services using FastAPI, Docker, Kubernetes, AWS EKS, IAM, CloudWatch, and OpenTelemetry, implementing model monitoring and drift detection to reduce incident-detection time by 30% and deployment failures by 25%."
+            ]
+        },
+        {
+            role: "Software Developer",
             company: "Wastefull Insights Pvt. Ltd.",
-            period: "Dec 2023 – Aug 2024",
+            period: "Mar 2021 – Jun 2022",
             location: "Vadodara, India",
             description: [
-                "Developed IoT dashboards using Qt and deployed databases on AWS, enhancing system performance and data accessibility.",
-                "Implemented Deepstream technologies to adjust robotic parameters, and optimize operational efficiency."
-            ]
-        },
-        {
-            role: "Java and AWS Intern",
-            company: "TSPL",
-            period: "May 2023 – Jul 2023",
-            location: "Vadodara, India",
-            description: [
-                "Contributed to the development of cloud-based applications using Java (Spring Boot) and AWS services, improving backend scalability."
-            ]
-        },
-        {
-            role: "Cybersecurity Intern",
-            company: "Acmegrade",
-            period: "May 2022 – Jul 2022",
-            location: "Vadodara, India",
-            description: [
-                "Gained foundational cybersecurity skills, including network security, data protection, and threat analysis."
+                "Developed robotic parameter optimization solutions using Deepstream technologies, supporting software functionality for industrial robotics and connected IoT applications.",
+                "Designed and implemented Qt-based industrial IoT dashboards for real-time monitoring, visualization, and analysis of data generated by connected robotic systems.",
+                "Integrated IoT communication interfaces with backend services and cloud-hosted databases, enabling reliable industrial data exchange, processing, and visualization.",
+                "Optimized backend processing and database operations, improving system performance by 25% across industrial software applications.",
+                "Supported software development, debugging, testing, deployment, and production troubleshooting while participating in Agile development and cross-functional collaboration."
             ]
         }
     ];
