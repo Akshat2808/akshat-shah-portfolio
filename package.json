@@ -1,12 +1,11 @@
 {
-  "name": "akshat-shah-portfolio-workspace",
+  "name": "akshat-shah-portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "npm --prefix portfolio run dev",
-    "build": "npm --prefix portfolio run build",
+    "build": "npm --prefix portfolio install && npm --prefix portfolio run build",
     "start": "npm --prefix portfolio run start",
     "lint": "npm --prefix portfolio run lint"
   }
 }
-
